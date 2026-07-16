@@ -13,9 +13,14 @@
    (local: `../rooster_alarm`). If a task involves app code, do it there.
 3. **No secrets, keys, or credentials** of any kind — everything committed
    here is public on the internet immediately.
-4. Do not delete or rename `/privacy/` or `/support/` paths — they are wired
-   into the shipped app (PaywallView/SettingsView) and App Store Connect.
-   Breaking these URLs breaks App Review compliance (guideline 3.1.2).
+4. Do not delete or rename the `/privacy/`, `/terms/` or `/support/` paths —
+   they are wired into the shipped app (PaywallView/SettingsView) and App
+   Store Connect. Breaking these URLs breaks App Review compliance
+   (3.1.2; `/support/` is the required ASC Support URL — user confirmed
+   keeping it on Jul 16, 2026 after considering deletion).
+5. Content style (user preference): no "short version"/TL;DR summary boxes
+   on legal pages; header brand uses the real app logo SVGs in `assets/`
+   (light/dark variants via `<picture>`), not an emoji.
 
 ## Enforcement
 
