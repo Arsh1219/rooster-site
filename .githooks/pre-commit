@@ -1,0 +1,37 @@
+#!/bin/sh
+# rooster-site guard: this repo is PUBLIC and must only ever contain the
+# static Pages site. Reject anything that isn't an allowlisted page asset.
+set -e
+
+fail=0
+for f in $(git diff --cached --name-only --diff-filter=ACR); do
+  case "$f" in
+    *.html|*.css|*.md|*.png|*.jpg|*.jpeg|*.svg|*.ico|*.webp|*.txt|\
+    .nojekyll|CNAME|.githooks/*)
+      ;;
+    *)
+      echo "BLOCKED: '$f' is not an allowed site file (html/css/md/images only)." >&2
+      fail=1
+      ;;
+  esac
+  # Belt and braces: block anything that looks like code or credentials.
+  case "$f" in
+    *.swift|*.p8|*.p12|*.pem|*.ipa|*.mobileprovision|*.plist|*.xcodeproj*|*.env*)
+      echo "BLOCKED: '$f' looks like app code or a credential — it must NEVER enter this public repo." >&2
+      fail=1
+      ;;
+  esac
+  # No blobs: pages should be small text/images.
+  size=$(git cat-file -s "$(git rev-parse ":$f")" 2>/dev/null || echo 0)
+  if [ "$size" -gt 2000000 ]; then
+    echo "BLOCKED: '$f' is over 2MB — site assets should be small." >&2
+    fail=1
+  fi
+done
+
+if [ "$fail" -ne 0 ]; then
+  echo "" >&2
+  echo "Commit rejected by rooster-site scope guard (.githooks/pre-commit)." >&2
+  echo "App code belongs in the private repo: Arsh1219/rooster-alarm." >&2
+  exit 1
+fi
