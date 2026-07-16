@@ -28,7 +28,7 @@
     <li><strong>Camera</strong> — the photo and QR missions use the camera only to confirm you're up. Images are processed on-device and never uploaded, stored or shared.</li>
     <li><strong>Motion</strong> — the steps and shake missions count your movement on-device only.</li>
     <li><strong>NFC</strong> — the identifier of your registered NFC tag is stored only on your phone.</li>
-    <li><strong>Crash and performance diagnostics</strong> — collected by Apple's MetricKit and processed on your device.</li>
+    <li><strong>Imported sounds</strong> — audio files you add as alarm sounds (a Pro feature) are stored only on your phone and never uploaded.</li>
   </ul>
   <p>If you delete the app, this data is deleted with it.</p>
 
@@ -36,8 +36,9 @@
   <p>Rooster Pro subscriptions and one-time purchases are processed by Apple through the App&nbsp;Store. We never see your name, email address or payment details.</p>
   <p>To know whether Pro is unlocked on your device, the app uses <a href="https://www.revenuecat.com/privacy/" rel="noopener">RevenueCat</a>, which receives your App&nbsp;Store receipt and a randomly generated anonymous identifier — nothing that identifies you personally.</p>
 
-  <h2>Anonymous analytics</h2>
-  <p>To understand which features are used and make the app better, Rooster sends anonymous usage signals (for example "alarm armed" or "onboarding completed") to <a href="https://telemetrydeck.com/privacy/" rel="noopener">TelemetryDeck</a>, a privacy-focused analytics service. These signals contain no personal information, no identifiers that can be traced back to you, no alarm times and no alarm content. TelemetryDeck anonymizes all data before we see it, in aggregate form only.</p>
+  <h2>Anonymous analytics and crash reports</h2>
+  <p>To understand which features are used and make the app better, Rooster sends anonymous usage signals (for example "alarm armed" or "onboarding completed") to <a href="https://firebase.google.com/support/privacy" rel="noopener">Google Firebase Analytics</a>. These signals contain no personal information, no alarm times and no alarm content. They are grouped under a random identifier created for your install of the app — it is not your name, email or phone number, and we never use the advertising identifier (IDFA), ad personalization or any advertising features. If you delete the app, that identifier is deleted with it.</p>
+  <p>If the app crashes, a crash report (stack trace, device model, iOS version) is sent to <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Crashlytics</a> so we can find and fix the problem. Crash reports are anonymous and are not linked to your identity.</p>
 
   <h2>What we don't do</h2>
   <ul>
@@ -54,7 +55,7 @@
   <p>Rooster is not directed at children under 13, and we do not knowingly collect personal information from anyone, including children.</p>
 
   <h2>Your rights</h2>
-  <p>Because Rooster holds no personal data about you, there is usually nothing for us to access, correct or delete. If you would like the anonymous purchase identifier RevenueCat holds for your device deleted, or have any other privacy request, email us and we'll take care of it within 30 days.</p>
+  <p>Because Rooster holds no personal data about you, there is usually nothing for us to access, correct or delete. If you would like the anonymous identifiers RevenueCat or Firebase hold for your device deleted, or have any other privacy request, email us and we'll take care of it within 30 days.</p>
 
   <h2>Changes to this policy</h2>
   <p>If we make material changes, we'll update this page and the "last updated" date above.</p>
