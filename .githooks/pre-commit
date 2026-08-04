@@ -6,8 +6,8 @@ set -e
 fail=0
 for f in $(git diff --cached --name-only --diff-filter=ACR); do
   case "$f" in
-    *.html|*.css|*.md|*.png|*.jpg|*.jpeg|*.svg|*.ico|*.webp|*.txt|\
-    .nojekyll|CNAME|.githooks/*)
+    *.html|*.css|*.md|*.png|*.jpg|*.jpeg|*.svg|*.ico|*.webp|*.txt|*.woff2|*.xml|\
+    .nojekyll|.htaccess|CNAME|.githooks/*)
       ;;
     *)
       echo "BLOCKED: '$f' is not an allowed site file (html/css/md/images only)." >&2

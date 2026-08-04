@@ -5,8 +5,13 @@
 > `rooster-alarm`. Scope is enforced by `.githooks/pre-commit`
 > (`git config core.hooksPath .githooks` after cloning).
 
-Static GitHub Pages site for the Rooster iOS alarm app: landing page, privacy policy, and support page (required App Store URLs).
+Static GitHub Pages site for the Rooster iOS alarm app, served at
+**https://wakerooster.com** (see `CNAME`; setup steps in `DEPLOY.md`).
 
-- `/` — landing page
+- `/` — marketing landing page
 - `/privacy/` — privacy policy (App Store Connect "Privacy Policy URL" + in-app links)
+- `/terms/` — terms of use (in-app links)
 - `/support/` — support page (App Store Connect "Support URL")
+
+No build step, no JavaScript, no analytics. Fonts are self-hosted
+(SIL OFL, see `fonts/OFL-LICENSES.txt`).

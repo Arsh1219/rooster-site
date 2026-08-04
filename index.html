@@ -3,42 +3,468 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rooster — The alarm that gets you up</title>
-<meta name="description" content="Rooster is an iOS alarm clock that rings through Silent and Do Not Disturb, with wake-up missions that make sure you're really up.">
-<link rel="icon" type="image/svg+xml" href="assets/logo-on-light.svg">
+<title>Rooster: Heavy Sleeper Alarm for iPhone. Rings even on Silent.</title>
+<meta name="description" content="For people every other alarm has failed. Built on Apple's alarm engine, Rooster rings through Silent, DND and Focus at full volume. Free forever: the alarm.">
+<link rel="canonical" href="https://wakerooster.com/">
+<meta name="theme-color" content="#000000">
+<meta name="apple-itunes-app" content="app-id=6791535362">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rooster">
+<meta property="og:title" content="Rooster: Heavy Sleeper Alarm for iPhone">
+<meta property="og:description" content="Rings through Silent, DND and Focus. Every time. Missions get you out of bed. Free forever: the alarm.">
+<meta property="og:url" content="https://wakerooster.com/">
+<meta property="og:image" content="https://wakerooster.com/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "name": "Rooster: Heavy Sleeper Alarm",
+      "operatingSystem": "iOS 26.0 or later",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Alarm app for heavy sleepers built on Apple's AlarmKit. Rings through Silent, Do Not Disturb and Focus at full volume, with wake missions, escalation and a wake check.",
+      "url": "https://wakerooster.com/",
+      "installUrl": "https://apps.apple.com/app/id6791535362",
+      "image": "https://wakerooster.com/assets/og.png",
+      "offers": [
+        { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free forever: the alarm." },
+        { "@type": "Offer", "price": "24.99", "priceCurrency": "USD", "description": "Rooster Pro yearly subscription with one week free." },
+        { "@type": "Offer", "price": "34.99", "priceCurrency": "USD", "description": "Rooster Pro Lifetime, a single purchase." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Will it really ring on Silent?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rooster schedules alarms through AlarmKit, Apple's system alarm framework, the same machinery behind the Clock app. The Silent switch, Do Not Disturb and Focus modes do not apply to system alarms." }
+        },
+        {
+          "@type": "Question",
+          "name": "What if a mission is impossible in the moment?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Hold 10 seconds and type I give up. The escape hatch is on every mission screen and always works, even with a broken camera or a missing NFC tag." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work on Android or iPad?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Rooster is iPhone only and needs iOS 26 or later, because AlarmKit exists only there." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is free and what is Pro?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Free forever: alarms that ring through Silent, repeat schedules, labels, and snooze rules. Pro adds the missions, stacking, escalation, wake check, shift rotations and imported sounds. $24.99 a year or $34.99 once." }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you collect about me?",
+          "acceptedAnswer": { "@type": "Answer", "text": "There is no account and there are no ads. Mission photos never leave your phone. Rooster sends anonymous crash and usage signals, nothing that identifies you. The privacy policy has the details." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I cancel?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Subscriptions are handled by Apple. Open your App Store subscriptions and cancel there. Pro stays active until the end of the paid period." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
-<main>
-  <a class="brand" href="./">
-    <picture>
-      <source srcset="assets/logo-on-dark.svg" media="(prefers-color-scheme: dark)">
-      <img src="assets/logo-on-light.svg" alt="" class="logo">
-    </picture>
-    Rooster
-  </a>
+<a class="skip" href="#main">Skip to content</a>
 
-  <h1>The alarm that actually gets you up.</h1>
-  <p class="lede">Rooster rings through Silent, Do&nbsp;Not&nbsp;Disturb and Focus — then makes you prove you're awake with missions like steps, photo, QR and NFC before it stops.</p>
-
-  <p><em>Coming soon to the App&nbsp;Store.</em></p>
-
-  <div class="card">
-    <h2>Privacy first</h2>
-    <p>No accounts. No ads. No tracking. Your alarms stay on your phone. Read the full <a href="privacy/">privacy policy</a>.</p>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <img class="logo" src="assets/logo-on-dark.svg" alt="">
+      Rooster
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="#missions">Missions</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="support/">Support</a>
+    </nav>
+    <a class="btn btn-small head-cta" href="https://apps.apple.com/app/id6791535362">Get Rooster</a>
   </div>
+</header>
 
-  <div class="card">
-    <h2>Need help?</h2>
-    <p>Questions, bugs or feature ideas — visit <a href="support/">support</a>.</p>
-  </div>
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Heavy sleeper alarm for iPhone</span>
+      <h1>Rings.<br>Even on Silent.</h1>
+      <p class="lede">For people every other alarm has failed. Rooster is built on Apple's alarm engine, so it rings through the Silent switch, Do Not Disturb and every Focus. Full volume, ringer at zero, app closed.</p>
+
+      <div class="cta-row">
+        <a class="badge-link" href="https://apps.apple.com/app/id6791535362">
+          <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="162" height="54">
+        </a>
+        <div class="qr-side">
+          <div class="qr-box" aria-hidden="true">
+            <img src="assets/qr-appstore.svg" alt="">
+          </div>
+          <p>Scan with your iPhone to open the App Store</p>
+        </div>
+      </div>
+      <p class="microcopy">Free forever: the alarm. iOS 26 or later.</p>
+
+      <div class="hero-stage">
+        <div class="device">
+          <img src="assets/phone-home.webp" alt="Rooster home screen: the next alarm armed for 5:45 AM, two scheduled alarms, and the badge rings through Silent, DND, Focus" width="660" height="1434" fetchpriority="high">
+        </div>
+        <svg class="arcs" viewBox="0 0 120 150" aria-hidden="true">
+          <path d="M14 38 A42 42 0 0 1 14 106" stroke-width="17"/>
+          <path d="M40 12 A76 76 0 0 1 40 132" stroke-width="16" opacity="0.66"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="engine" class="band">
+    <div class="wrap">
+      <div class="band-head measure reveal">
+        <span class="eyebrow">The engine</span>
+        <h2>Built on Apple's own alarm engine.</h2>
+        <p class="lede">Rooster schedules alarms with AlarmKit, the same system framework behind the iPhone's Clock app. That is why it can do what ordinary alarm apps cannot.</p>
+      </div>
+      <div class="grid-3 reveal">
+        <div class="card">
+          <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 17h12l-1.6-3.2V9.5A4.4 4.4 0 0 0 12 5a4.4 4.4 0 0 0-4.4 4.5v4.3L6 17Z"/>
+            <line x1="10.3" y1="20.2" x2="13.7" y2="20.2"/>
+            <path d="M19.5 6.5a6.5 6.5 0 0 1 0 7"/>
+          </svg>
+          <h3>Silent switch on</h3>
+          <p>Rings at full volume with the ringer at zero.</p>
+        </div>
+        <div class="card">
+          <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 13.5A8 8 0 1 1 10.5 4a6.5 6.5 0 0 0 9.5 9.5Z"/>
+            <line x1="4.5" y1="19.5" x2="19.5" y2="4.5"/>
+          </svg>
+          <h3>DND and Focus on</h3>
+          <p>Breaks through Do Not Disturb and every Focus mode.</p>
+        </div>
+        <div class="card">
+          <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.5 5.6a8 8 0 1 0 9 0"/>
+            <line x1="12" y1="3" x2="12" y2="10"/>
+          </svg>
+          <h3>App closed</h3>
+          <p>Rings after a force quit. Rings after a restart.</p>
+        </div>
+      </div>
+      <div class="engine-chip reveal">
+        <span class="chip">Engine: AlarmKit</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="missions" class="band">
+    <div class="wrap">
+      <div class="band-head measure reveal">
+        <span class="eyebrow">Pro missions</span>
+        <h2>Missions get you out of bed</h2>
+        <p class="lede">To stop the alarm, you complete a mission built for a brain that is still half asleep. Stack up to 3 for the mornings that matter. A snooze can never dismiss.</p>
+      </div>
+      <div class="missions-layout reveal">
+        <div class="device">
+          <img src="assets/phone-mission.webp" alt="Rooster math mission screen asking 53 plus 31 before the alarm stops" width="660" height="1434">
+        </div>
+        <div class="tile-grid">
+          <div class="card tile">
+            <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="7" y1="4.5" x2="7" y2="10.5"/><line x1="4" y1="7.5" x2="10" y2="7.5"/>
+              <line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="20" y1="14.5" x2="14.5" y2="20"/>
+            </svg>
+            <h3>Math</h3>
+            <p>Three levels, from gentle to wide awake.</p>
+          </div>
+          <div class="card tile">
+            <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4.5" y="12" width="5.5" height="8.5" rx="2.75"/>
+              <rect x="14" y="3.5" width="5.5" height="8.5" rx="2.75"/>
+            </svg>
+            <h3>Steps</h3>
+            <p>Walk it off, counted by your phone.</p>
+          </div>
+          <div class="card tile">
+            <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="7" width="18" height="13" rx="3"/>
+              <circle cx="12" cy="13.5" r="3.6"/>
+              <path d="M8.5 7l1.6-2.5h3.8L15.5 7"/>
+            </svg>
+            <h3>Photo match</h3>
+            <p>Photograph your bathroom sink to prove you are up.</p>
+          </div>
+          <div class="card tile">
+            <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="4.5" y1="5" x2="4.5" y2="19"/>
+              <line x1="8.5" y1="5" x2="8.5" y2="19"/>
+              <line x1="12" y1="5" x2="12" y2="15"/>
+              <line x1="15.5" y1="5" x2="15.5" y2="19"/>
+              <line x1="19.5" y1="5" x2="19.5" y2="15"/>
+            </svg>
+            <h3>Scan</h3>
+            <p>The barcode on your toothpaste works.</p>
+          </div>
+          <div class="card tile">
+            <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="6" cy="12" r="1.4"/>
+              <path d="M11.5 6.5 A7.5 7.5 0 0 1 11.5 17.5"/>
+              <path d="M16 3.5 A11.5 11.5 0 0 1 16 20.5"/>
+            </svg>
+            <h3>NFC tag</h3>
+            <p>Stick one across the room. Works in the dark.</p>
+          </div>
+          <div class="card tile">
+            <svg class="glyph" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="8" y="4" width="8" height="16" rx="2.5"/>
+              <line x1="4" y1="9" x2="4" y2="15"/>
+              <line x1="20" y1="9" x2="20" y2="15"/>
+            </svg>
+            <h3>Shake</h3>
+            <p>The gentle one.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card escape-card reveal">
+        <h3>Every mission has an escape hatch.</h3>
+        <p>Hold 10 seconds, type "I give up", and the alarm stops. It always works, even with a broken camera. Effortful. Never impossible.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="system" class="band">
+    <div class="wrap">
+      <div class="band-head measure reveal">
+        <span class="eyebrow">The morning system<span class="pro-pill">Pro</span></span>
+        <h2>One alarm, not fifteen</h2>
+        <p class="lede">Everything you currently do with fifteen alarms, done properly by one.</p>
+      </div>
+      <div class="grid-2 reveal">
+        <div class="card">
+          <h3>Escalation</h3>
+          <p>Each unanswered round rings louder than the last. The volume does the insisting, so you do not need a backup alarm for the backup alarm.</p>
+        </div>
+        <div class="card">
+          <h3>Wake check</h3>
+          <p>Dismissed, then drifted off again? Five minutes later Rooster asks if you are still up. No answer, and it rings once more.</p>
+        </div>
+        <div class="card">
+          <h3>Shift rotations</h3>
+          <p>Days, nights, 4 on 4 off. Build the rotation once and the schedule takes care of itself.</p>
+        </div>
+        <div class="card">
+          <h3>Your own sounds</h3>
+          <p>Import any audio file and wake to the one sound you cannot sleep through.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head measure reveal">
+        <h2>A snooze can never dismiss</h2>
+        <p class="lede">Snooze and stop live at opposite ends of the screen, and a snooze always rings again. That is enforced by the system, not by a promise. You choose the snooze length and how many are allowed.</p>
+      </div>
+      <div class="card snooze-demo reveal">
+        <div class="row">
+          <span class="pill-snooze">Snooze, 9 min</span>
+          <span class="pill-stop">Stop, after Math</span>
+        </div>
+        <p class="snooze-note">Snoozed, rings again at 5:54 AM.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head measure reveal">
+        <span class="eyebrow">The reliability log</span>
+        <h2>Every morning, on the record</h2>
+        <p class="lede">Rooster writes down what happened: armed, fired, snoozed, dismissed, and when. If you ever wonder whether it rang, the answer is written down.</p>
+      </div>
+      <div class="card log-card reveal">
+        <div class="log-row">
+          <p class="what"><span class="ok">Dismissed</span>, after Steps</p>
+          <p class="when">Today at 5:52 AM</p>
+        </div>
+        <div class="log-row">
+          <p class="what">Fired</p>
+          <p class="when">Today at 5:45 AM</p>
+        </div>
+        <div class="log-row">
+          <p class="what">Armed, rings in 7h 55m</p>
+          <p class="when">Yesterday at 9:50 PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="band-head measure reveal">
+        <h2>Private by architecture.</h2>
+      </div>
+      <div class="chip-row reveal">
+        <span class="chip">No account</span>
+        <span class="chip">No ads</span>
+        <span class="chip">Photos stay on the phone</span>
+      </div>
+      <p class="lede measure reveal" style="text-align:center">Mission photos are compared on your phone and never uploaded. There is nothing to sign into and nothing sold. The only thing that leaves the phone is anonymous crash and usage data. <a href="privacy/">Read the privacy policy</a>.</p>
+    </div>
+  </section>
+
+  <section id="pricing" class="band">
+    <div class="wrap">
+      <div class="band-head measure reveal">
+        <span class="eyebrow">Pricing</span>
+        <h2>Free forever: the alarm.</h2>
+      </div>
+      <div class="plans reveal">
+        <div class="card plan plan-free">
+          <p class="plan-name">Free</p>
+          <p class="plan-sub">The alarm.</p>
+          <p class="price">$0</p>
+          <p class="price-alt">No account, no ads, no catch</p>
+          <ul>
+            <li>Rings through Silent, DND and Focus</li>
+            <li>Repeat schedules and labels</li>
+            <li>Snooze rules you control</li>
+          </ul>
+          <p><a href="https://apps.apple.com/app/id6791535362">Get the app</a></p>
+        </div>
+        <div class="plan-pro-wrap">
+          <div class="card plan plan-pro">
+            <p class="plan-name">Pro</p>
+            <p class="plan-sub">The part that gets you out of bed.</p>
+            <p class="price">$24.99 a year</p>
+            <p class="price-alt">about $2.08 a month</p>
+            <p class="trial">One week free to test everything</p>
+            <ul>
+              <li>6 missions, stack up to 3</li>
+              <li>Escalation that rings louder each round</li>
+              <li>Wake check that rings once more if you doze off</li>
+              <li>Shift rotations</li>
+              <li>Import your own sounds</li>
+              <li>The escape hatch, on every mission, always</li>
+            </ul>
+            <a class="btn" href="https://apps.apple.com/app/id6791535362">Start the free week</a>
+          </div>
+        </div>
+        <div class="card plan plan-life">
+          <p class="plan-name">Lifetime</p>
+          <p class="plan-sub">Pro, paid once.</p>
+          <p class="price">$34.99</p>
+          <p class="price-alt">One payment, yours forever</p>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>No subscription, nothing renews</li>
+            <li>Yours forever</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://apps.apple.com/app/id6791535362">Buy once</a>
+        </div>
+      </div>
+      <p class="price-line reveal">That's the whole price list.</p>
+      <p class="price-note reveal">Purchases are handled by Apple. The free week converts to the yearly plan unless you cancel before it ends, and you can cancel anytime from your App Store subscriptions. Prices shown in US dollars.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="band">
+    <div class="wrap">
+      <div class="band-head measure reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2>Fair questions</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Will it really ring on Silent?</summary>
+          <p>Yes. Rooster schedules alarms through AlarmKit, Apple's system alarm framework, the same machinery behind the Clock app. The Silent switch, Do Not Disturb and Focus modes do not apply to system alarms.</p>
+        </details>
+        <details>
+          <summary>What if a mission is impossible in the moment?</summary>
+          <p>Hold 10 seconds and type "I give up". The escape hatch is on every mission screen and always works, even with a broken camera or a missing NFC tag.</p>
+        </details>
+        <details>
+          <summary>Does it work on Android or iPad?</summary>
+          <p>No. Rooster is iPhone only and needs iOS 26 or later, because AlarmKit exists only there.</p>
+        </details>
+        <details>
+          <summary>What is free and what is Pro?</summary>
+          <p>Free forever: alarms that ring through Silent, repeat schedules, labels, and snooze rules. Pro adds the missions, stacking, escalation, wake check, shift rotations and imported sounds. $24.99 a year or $34.99 once.</p>
+        </details>
+        <details>
+          <summary>What do you collect about me?</summary>
+          <p>There is no account and there are no ads. Mission photos never leave your phone. Rooster sends anonymous crash and usage signals, nothing that identifies you. The <a href="privacy/">privacy policy</a> has the details.</p>
+        </details>
+        <details>
+          <summary>How do I cancel?</summary>
+          <p>Subscriptions are handled by Apple. Open your <a href="https://apps.apple.com/account/subscriptions" rel="noopener">App Store subscriptions</a> and cancel there. Pro stays active until the end of the paid period.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <svg class="band-arcs" viewBox="0 0 120 150" aria-hidden="true">
+          <path d="M14 38 A42 42 0 0 1 14 106" stroke-width="17"/>
+          <path d="M40 12 A76 76 0 0 1 40 132" stroke-width="16"/>
+        </svg>
+        <h2>Replace fifteen alarms with one that cannot fail.</h2>
+        <div class="cta-row">
+          <a class="badge-link" href="https://apps.apple.com/app/id6791535362">
+            <img src="assets/app-store-badge.svg" alt="Download on the App Store" width="162" height="54">
+          </a>
+        </div>
+        <p class="microcopy">iOS 26 or later. The alarm is free forever.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
 
-<footer>
-  <span>© 2026 Rooster</span>
-  <a href="privacy/">Privacy</a>
-  <a href="terms/">Terms</a>
-  <a href="support/">Support</a>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand">
+        <img src="assets/logo-on-dark.svg" alt="" width="28" height="23">
+        <div>
+          <span class="brand" style="font-size:1.05rem">Rooster</span>
+          <p class="tagline">Heavy sleeper alarm for iPhone.</p>
+        </div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="privacy/">Privacy</a>
+        <a href="terms/">Terms</a>
+        <a href="support/">Support</a>
+        <a href="https://apps.apple.com/app/id6791535362">App Store</a>
+      </nav>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 Billion Web Pte. Ltd.</span>
+      <span>Apple, the Apple logo and App Store are trademarks of Apple Inc.</span>
+    </div>
+  </div>
 </footer>
+
 </body>
 </html>

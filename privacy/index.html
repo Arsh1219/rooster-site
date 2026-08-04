@@ -3,23 +3,38 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Rooster</title>
+<title>Privacy Policy · Rooster</title>
 <meta name="description" content="Privacy policy for the Rooster alarm app for iOS.">
-<link rel="icon" type="image/svg+xml" href="../assets/logo-on-light.svg">
+<link rel="canonical" href="https://wakerooster.com/privacy/">
+<meta name="theme-color" content="#000000">
+<meta name="apple-itunes-app" content="app-id=6791535362">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rooster">
+<meta property="og:title" content="Privacy Policy · Rooster">
+<meta property="og:description" content="Privacy policy for the Rooster alarm app for iOS.">
+<meta property="og:url" content="https://wakerooster.com/privacy/">
+<meta property="og:image" content="https://wakerooster.com/assets/og.png">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
 <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-<main>
-  <a class="brand" href="../">
-    <picture>
-      <source srcset="../assets/logo-on-dark.svg" media="(prefers-color-scheme: dark)">
-      <img src="../assets/logo-on-light.svg" alt="" class="logo">
-    </picture>
-    Rooster
-  </a>
+<a class="skip" href="#main">Skip to content</a>
 
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="../">
+      <img class="logo" src="../assets/logo-on-dark.svg" alt="">
+      Rooster
+    </a>
+    <a class="btn btn-small head-cta" href="https://apps.apple.com/app/id6791535362">Get Rooster</a>
+  </div>
+</header>
+
+<main id="main" class="doc">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: July 16, 2026</p>
+  <p class="updated">Last updated: August 4, 2026</p>
 
   <h2>Data that stays on your device</h2>
   <p>Everything you create in Rooster is stored locally on your iPhone:</p>
@@ -40,10 +55,13 @@
   <p>To understand which features are used and make the app better, Rooster sends anonymous usage signals (for example "alarm armed" or "onboarding completed") to <a href="https://firebase.google.com/support/privacy" rel="noopener">Google Firebase Analytics</a>. These signals contain no personal information, no alarm times and no alarm content. They are grouped under a random identifier created for your install of the app — it is not your name, email or phone number, and we never use the advertising identifier (IDFA), ad personalization or any advertising features. If you delete the app, that identifier is deleted with it.</p>
   <p>If the app crashes, a crash report (stack trace, device model, iOS version) is sent to <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Crashlytics</a> so we can find and fix the problem. Crash reports are anonymous and are not linked to your identity.</p>
 
+  <h2>Ad measurement</h2>
+  <p>To know whether our own ads work, Rooster uses <a href="https://www.appsflyer.com/legal/services-privacy-policy/" rel="noopener">AppsFlyer</a>. It receives anonymous install and purchase signals under a randomly generated identifier, together with Apple's privacy preserving SKAdNetwork reports: aggregate campaign numbers that cannot identify you or your device. Rooster never asks for tracking permission, never reads the advertising identifier (IDFA), and this data is used only to measure our own advertising.</p>
+
   <h2>What we don't do</h2>
   <ul>
     <li>No user accounts — we never ask for your name, email or phone number.</li>
-    <li>No advertising and no advertising SDKs.</li>
+    <li>No ads. Rooster shows no advertising.</li>
     <li>No tracking across apps or websites (the app declares <em>no tracking</em> to Apple).</li>
     <li>No selling or sharing of data with data brokers — ever.</li>
   </ul>
@@ -55,7 +73,7 @@
   <p>Rooster is not directed at children under 13, and we do not knowingly collect personal information from anyone, including children.</p>
 
   <h2>Your rights</h2>
-  <p>Because Rooster holds no personal data about you, there is usually nothing for us to access, correct or delete. If you would like the anonymous identifiers RevenueCat or Firebase hold for your device deleted, or have any other privacy request, email us and we'll take care of it within 30 days.</p>
+  <p>Because Rooster holds no personal data about you, there is usually nothing for us to access, correct or delete. If you would like the anonymous identifiers RevenueCat, Firebase or AppsFlyer hold for your device deleted, or have any other privacy request, email us and we'll take care of it within 30 days.</p>
 
   <h2>Changes to this policy</h2>
   <p>If we make material changes, we'll update this page and the "last updated" date above.</p>
@@ -64,11 +82,26 @@
   <p>Questions about privacy? Email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>.</p>
 </main>
 
-<footer>
-  <span>© 2026 Rooster</span>
-  <a href="../">Home</a>
-  <a href="../terms/">Terms</a>
-  <a href="../support/">Support</a>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand">
+        <img src="../assets/logo-on-dark.svg" alt="" width="28" height="23">
+        <div>
+          <span class="brand" style="font-size:1.05rem">Rooster</span>
+          <p class="tagline">Heavy sleeper alarm for iPhone.</p>
+        </div>
+      </div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="../">Home</a>
+        <a href="../terms/">Terms</a>
+        <a href="../support/">Support</a>
+      </nav>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 Billion Web Pte. Ltd.</span>
+    </div>
+  </div>
 </footer>
 </body>
 </html>
