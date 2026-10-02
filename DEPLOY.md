@@ -24,7 +24,15 @@ git add -A && git commit -m "site: <what changed>" && git push
 rsync -avz --delete \
   --exclude '.git*' --exclude 'CLAUDE.md' --exclude 'README.md' \
   --exclude 'DEPLOY.md' --exclude '.nojekyll' \
-  ./ conversorsdeletr@135.181.16.97:<docroot for wakerooster.com>/
+  --exclude '.htaccess' --exclude '.well-known' \
+  ./ conversorsdeletr@135.181.16.97:public_html/wakerooster.com/
+```
+
+The server's `.htaccess` carries a cPanel generated PHP handler block after
+the `ErrorDocument` line and `.well-known/` is managed by cPanel (AutoSSL),
+so both are excluded from the rsync and never overwritten.
+
+```
 ```
 
 `.htaccess` (Apache) provides the custom 404 on cPanel; GitHub Pages

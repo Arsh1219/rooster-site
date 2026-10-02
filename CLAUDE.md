@@ -35,6 +35,10 @@ link to; must stay published and current).
    no exclamation marks, and no hyphens or dashes in rendered text.
 7. Legal pages (`/privacy/`, `/terms/`) changed only with explicit user
    approval — they are load-bearing for App Review and ad platforms.
+8. **No prices, trial lengths or discount numbers anywhere on the site**
+   (pages, FAQ, JSON-LD offers). The app runs price and trial A/B tests, so
+   any number here is wrong for some users. Say "plans and prices are shown
+   in the app" instead (owner rule, Oct 2 2026).
 
 ## Enforcement
 

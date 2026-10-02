@@ -456,7 +456,7 @@ h2 { font-size: clamp(2rem, 4.5vw, 3.25rem); margin-bottom: 1rem; }
 .plan-pro-wrap { order: 0; }
 .plan-life { order: 1; }
 @media (min-width: 720px) {
-  .plans { grid-template-columns: 1fr 1.2fr 1fr; }
+  .plans { grid-template-columns: 1fr 1.2fr; max-width: 820px; }
   .plan-free { order: 0; }
   .plan-pro-wrap { order: 1; }
   .plan-life { order: 2; }

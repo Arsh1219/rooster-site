@@ -34,49 +34,65 @@
 
 <main id="main" class="doc">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: August 4, 2026</p>
+  <p class="updated">Last updated: October 2, 2026</p>
+
+  <h2>Who we are</h2>
+  <p>Rooster is made by Billion Web Pte. Ltd., a company registered in Singapore. We are the data controller for anything described on this page. You can reach us at <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>.</p>
+  <p>Rooster has no accounts and never asks for your name, email address or phone number. It does use random identifiers created for your install, such as an app instance ID, Apple's identifier for vendor (IDFV) and the IP address your phone connects from. Some privacy laws treat these as personal data, so this page explains each one, where it goes and how to have it deleted.</p>
 
   <h2>Data that stays on your device</h2>
-  <p>Everything you create in Rooster is stored locally on your iPhone:</p>
+  <p>Everything you create in Rooster is stored on your iPhone or iPad and never uploaded:</p>
   <ul>
-    <li><strong>Alarms and settings</strong> — times, labels, sounds, snooze preferences and mission configuration.</li>
-    <li><strong>Camera</strong> — the photo and QR missions use the camera only to confirm you're up. Images are processed on-device and never uploaded, stored or shared.</li>
-    <li><strong>Motion</strong> — the steps and shake missions count your movement on-device only.</li>
-    <li><strong>NFC</strong> — the identifier of your registered NFC tag is stored only on your phone.</li>
-    <li><strong>Imported sounds</strong> — audio files you add as alarm sounds (a Pro feature) are stored only on your phone and never uploaded.</li>
+    <li><strong>Alarms and settings:</strong> times, labels, sounds, snooze preferences, skip dates, pauses and mission configuration.</li>
+    <li><strong>Camera missions:</strong> the photo, scan, item hunt, pushups and squats missions use the camera only to confirm you are up. The camera image is analyzed on your phone and is never uploaded. For the photo mission, a small copy of the reference photo you register is kept on your phone so the app can match it in the morning.</li>
+    <li><strong>Motion:</strong> the steps and shake missions count your movement on your phone only.</li>
+    <li><strong>Mission details:</strong> the value of a registered QR or barcode, the identifier of a registered NFC tag and any custom typing phrase are stored only on your phone.</li>
+    <li><strong>Imported sounds:</strong> audio files you add as alarm sounds (a Pro feature) are stored only on your phone.</li>
+    <li><strong>Your records:</strong> the reliability log of what each alarm did and the record of mornings you woke with Rooster.</li>
   </ul>
-  <p>If you delete the app, this data is deleted with it.</p>
+  <p>Rooster has no cloud sync. Like other app data, this can be included in the backups your iPhone makes to iCloud or to your computer. If you delete the app, this data is deleted with it.</p>
 
   <h2>Purchases</h2>
-  <p>Rooster Pro subscriptions and one-time purchases are processed by Apple through the App&nbsp;Store. We never see your name, email address or payment details.</p>
-  <p>To know whether Pro is unlocked, the app checks your purchases with Apple's StoreKit directly on your device. We may also use <a href="https://www.revenuecat.com/privacy/" rel="noopener">RevenueCat</a> to manage subscriptions; when enabled, it receives your App&nbsp;Store receipt, a randomly generated anonymous identifier and Apple's privacy-preserving Search&nbsp;Ads attribution token (which App&nbsp;Store ad, if any, led to the install — campaign-level only) — nothing that identifies you personally.</p>
+  <p>Rooster Pro subscriptions and purchases are processed by Apple through the App&nbsp;Store. We never see your name, email address or payment details.</p>
+  <p>Rooster uses <a href="https://www.revenuecat.com/privacy/" rel="noopener">RevenueCat</a> to manage subscriptions and to show the Pro screen. RevenueCat receives your App&nbsp;Store purchase history, a random customer ID, your IDFV and IP address, Apple's privacy preserving Search&nbsp;Ads attribution token (which App&nbsp;Store ad campaign, ad group and keyword, if any, led to the install), the Firebase and AppsFlyer identifiers of your install, the language you use the app in, and the name of any test version you are in. RevenueCat passes purchase and renewal events on to Firebase Analytics and AppsFlyer so that purchases can be counted there. RevenueCat also delivers some Pro screen designs and prices, and may show different designs or prices to different people as part of a test.</p>
 
-  <h2>Anonymous analytics and crash reports</h2>
-  <p>To understand which features are used and make the app better, Rooster sends anonymous usage signals (for example "alarm armed" or "onboarding completed") to <a href="https://firebase.google.com/support/privacy" rel="noopener">Google Firebase Analytics</a>. These signals contain no personal information, no alarm times and no alarm content. They are grouped under a random identifier created for your install of the app — it is not your name, email or phone number, and we never use the advertising identifier (IDFA), ad personalization or any advertising features. If you delete the app, that identifier is deleted with it.</p>
-  <p>If the app crashes, a crash report (stack trace, device model, iOS version) is sent to <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Crashlytics</a> so we can find and fix the problem. Crash reports are anonymous and are not linked to your identity.</p>
+  <h2>Usage analytics</h2>
+  <p>To understand which features are used and make the app better, Rooster sends usage events to <a href="https://firebase.google.com/support/privacy" rel="noopener">Google Firebase Analytics</a>, such as when an alarm is armed, which mission types it uses, the answers you choose in the welcome questions, and whether you have Pro. Events never include alarm times, labels or anything you type. Firebase also records your device model, iOS version, language and an approximate region derived from your IP address, grouped under a random app instance ID created for your install. We export these events to Google BigQuery, in our own Google Cloud project, for analysis.</p>
+  <p>Rooster never shows the tracking permission prompt, never reads the advertising identifier (IDFA) and shows no advertising. There is currently no switch in the app to turn analytics off; deleting the app ends collection, and you can email us to have the data under your identifier deleted.</p>
+
+  <h2>Crash reports</h2>
+  <p>If the app crashes, a crash report is sent to <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase Crashlytics</a> so we can find and fix the problem. A report contains the stack trace, device model, iOS version, app version, a random installation ID and the last few usage events before the crash. It is not linked to your identity.</p>
+
+  <h2>Remote settings and experiments</h2>
+  <p>Rooster downloads settings from Google Firebase Remote Config, which lets us adjust some screens and run experiments without an app update. When you reach a screen that is part of an experiment, your install is placed in one version of it. That version name is recorded in Firebase Analytics and RevenueCat so we can compare results. Firebase uses a random installation ID for this. Experiments never change how or when your alarms ring.</p>
 
   <h2>Ad measurement</h2>
-  <p>To know whether our own ads work, Rooster uses <a href="https://www.appsflyer.com/legal/services-privacy-policy/" rel="noopener">AppsFlyer</a>. It receives anonymous install and purchase signals under a randomly generated identifier, together with Apple's privacy preserving SKAdNetwork reports: aggregate campaign numbers that cannot identify you or your device. Rooster never asks for tracking permission, never reads the advertising identifier (IDFA), and this data is used only to measure our own advertising.</p>
+  <p>We run ads for Rooster on Meta (Facebook and Instagram), TikTok, Google and Apple Search Ads. To see which ads lead to installs and trials, Rooster uses <a href="https://www.appsflyer.com/legal/services-privacy-policy/" rel="noopener">AppsFlyer</a>. AppsFlyer receives an AppsFlyer ID, your IDFV, IP address, device model, iOS version and language, together with a few in app events: when a free trial starts, when a purchase or renewal happens, and when you complete a wake. AppsFlyer passes these events to the ad network that ran the campaign so it can measure and improve our ads, and it receives Apple's SKAdNetwork reports, which are aggregate numbers that cannot identify you. This data is used only to measure our own advertising.</p>
 
-  <h2>What we don't do</h2>
+  <h2>What we do not do</h2>
   <ul>
-    <li>No user accounts — we never ask for your name, email or phone number.</li>
+    <li>No user accounts. We never ask for your name, email or phone number.</li>
     <li>No ads. Rooster shows no advertising.</li>
-    <li>No tracking across apps or websites (the app declares <em>no tracking</em> to Apple).</li>
-    <li>No selling or sharing of data with data brokers — ever.</li>
+    <li>No tracking prompt and no advertising identifier. The app declares <em>no tracking</em> to Apple.</li>
+    <li>No selling of your data, and no data brokers.</li>
   </ul>
 
   <h2>Permissions the app asks for</h2>
-  <p>Rooster requests permissions only when a feature needs them: alarm scheduling (so alarms ring through Silent and Do&nbsp;Not&nbsp;Disturb), notifications, camera, motion and NFC. Each permission is used solely for the alarm feature it belongs to, and you can change any of them in iOS Settings at any time.</p>
+  <p>Rooster requests permissions only when a feature needs them: alarm scheduling (so alarms ring through Silent and Do&nbsp;Not&nbsp;Disturb), notifications, camera, motion and NFC. Each permission is used solely for the alarm feature it belongs to, and you can change any of them in iOS Settings at any time. Notifications are local to your phone; Rooster has no push server.</p>
 
   <h2>Children</h2>
-  <p>Rooster is not directed at children under 13, and we do not knowingly collect personal information from anyone, including children.</p>
+  <p>Rooster is not directed at children under 13, or under 16 in the EU and UK, and we do not knowingly collect personal information from anyone, including children.</p>
+
+  <h2>Deletion and retention</h2>
+  <p>Deleting the app removes everything stored on your phone. Reinstalling the app creates fresh identifiers, so the data already sent under the old ones is no longer connected to your device. Data already sent to Firebase, RevenueCat or AppsFlyer is kept for as long as each provider's retention settings allow, and we can ask them to delete it. If you want the data held under your identifiers deleted, email us and we will work with you to find and delete it within 30 days.</p>
 
   <h2>Your rights</h2>
-  <p>Because Rooster holds no personal data about you, there is usually nothing for us to access, correct or delete. If you would like the anonymous identifiers RevenueCat, Firebase or AppsFlyer hold for your device deleted, or have any other privacy request, email us and we'll take care of it within 30 days.</p>
+  <p>Wherever you live, you can ask us what data we hold that relates to your install, ask for it to be deleted, or object to its use. Email us and we will reply within 30 days.</p>
+  <p><strong>If you are in the EU, UK or Switzerland:</strong> we process purchase data to provide Pro (performance of a contract), and usage analytics, crash reports and ad measurement in our legitimate interest of running and improving the app and knowing whether our ads work. The providers named above process data for us in the United States and elsewhere under standard contractual clauses. You have the right to access, correct, delete and port your data, to object to or restrict its use, and to complain to your local data protection authority.</p>
+  <p><strong>If you are in California:</strong> we do not sell your personal information. Passing events to an ad network to measure our ads may count as sharing under California law. Email us to opt out, and we will stop that sharing for your install.</p>
 
   <h2>Changes to this policy</h2>
-  <p>If we make material changes, we'll update this page and the "last updated" date above.</p>
+  <p>If we make material changes, we will update this page and the date above.</p>
 
   <h2>Contact</h2>
   <p>Questions about privacy? Email <a href="mailto:arshpreet@billionweb.co">arshpreet@billionweb.co</a>.</p>
@@ -89,13 +105,14 @@
         <img src="../assets/logo-on-dark.svg" alt="" width="28" height="23">
         <div>
           <span class="brand" style="font-size:1.05rem">Rooster</span>
-          <p class="tagline">Heavy sleeper alarm for iPhone.</p>
+          <p class="tagline">Heavy sleeper alarm for iPhone and iPad.</p>
         </div>
       </div>
       <nav class="foot-links" aria-label="Footer">
         <a href="../">Home</a>
         <a href="../terms/">Terms</a>
         <a href="../support/">Support</a>
+        <a href="../download/">Download</a>
       </nav>
     </div>
     <div class="foot-legal">
