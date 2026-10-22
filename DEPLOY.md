@@ -24,13 +24,28 @@ git add -A && git commit -m "site: <what changed>" && git push
 rsync -avz --delete \
   --exclude '.git*' --exclude 'CLAUDE.md' --exclude 'README.md' \
   --exclude 'DEPLOY.md' --exclude '.nojekyll' \
-  --exclude '.htaccess' --exclude '.well-known' \
+  --exclude '.htaccess' --exclude '.well-known' --exclude 'media' \
   ./ conversorsdeletr@135.181.16.97:public_html/wakerooster.com/
 ```
 
 The server's `.htaccess` carries a cPanel generated PHP handler block after
 the `ErrorDocument` line and `.well-known/` is managed by cPanel (AutoSSL),
 so both are excluded from the rsync and never overwritten.
+
+`media/` is excluded too: it holds files the cPanel host alone serves and
+the GitHub copy never carries (its pre commit guard allows pages and images
+only). Today that is `media/paywall/` (Oct 22 2026): the two looping sky
+videos the RevenueCat paywall B plays as its hero (`sky-day.mp4`,
+`sky-night.mp4`, their `-low` versions and the poster PNGs), referenced by
+URL from `scripts/rc_paywall.py` in the app repo because RevenueCat's API
+refuses video uploads. Deploy that folder by hand:
+
+```bash
+rsync -avz ./media/ conversorsdeletr@135.181.16.97:public_html/wakerooster.com/media/
+```
+
+Nothing on the site links to it; deleting a file there breaks the live
+paywall hero, so change the paywall first.
 
 ```
 ```
