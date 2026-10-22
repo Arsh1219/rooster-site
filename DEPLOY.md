@@ -34,11 +34,16 @@ so both are excluded from the rsync and never overwritten.
 
 `media/` is excluded too: it holds files the cPanel host alone serves and
 the GitHub copy never carries (its pre commit guard allows pages and images
-only). Today that is `media/paywall/` (Oct 22 2026): the two looping sky
+only). Today that is `media/paywall/v2/` (Oct 22 2026): the two looping sky
 videos the RevenueCat paywall B plays as its hero (`sky-day.mp4`,
 `sky-night.mp4`, their `-low` versions and the poster PNGs), referenced by
 URL from `scripts/rc_paywall.py` in the app repo because RevenueCat's API
-refuses video uploads. Deploy that folder by hand:
+refuses video uploads. Every new render goes into a NEW numbered folder
+(`v3/`, `v4/`): the old files stay for customers whose cached paywall still
+names them, and the URL never meets Cloudflare's cache, which keeps a miss
+for four hours (`cache-control: max-age=14400`, the zone caches everything,
+404 pages included). Never request a URL before its file is uploaded, and
+never overwrite a file in place. Deploy that folder by hand:
 
 ```bash
 rsync -avz ./media/ conversorsdeletr@135.181.16.97:public_html/wakerooster.com/media/
